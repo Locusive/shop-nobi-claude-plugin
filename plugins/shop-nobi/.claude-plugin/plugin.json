@@ -16,5 +16,8 @@
     "gifts",
     "compare"
   ],
-  "privacyPolicyUrl": "https://nobi.ai/privacy"
+  "privacyPolicyUrl": "https://nobi.ai/privacy",
+  "supportUrl": "https://github.com/Locusive/shop-nobi-claude-plugin/issues",
+  "documentationUrl": "https://github.com/Locusive/shop-nobi-claude-plugin#readme",
+  "termsOfServiceUrl": "https://nobi.ai/terms"
 }
