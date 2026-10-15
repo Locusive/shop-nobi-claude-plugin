@@ -1,1 +1,19 @@
-{"name": "shop-nobi", "version": "0.1.0", "description": "Find and compare products from about 900 vetted independent online stores with Shop Nobi.", "author": {"name": "Locusive"}, "homepage": "https://nobi.ai/shop"}
+{
+  "name": "shop-nobi",
+  "version": "0.2.0",
+  "description": "Find and compare products from about 900 vetted independent online stores with Shop Nobi.",
+  "author": {
+    "name": "Locusive",
+    "url": "https://nobi.ai"
+  },
+  "homepage": "https://nobi.ai/shop",
+  "displayName": "Shop Nobi",
+  "repository": "https://github.com/Locusive/shop-nobi-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "shopping",
+    "product-search",
+    "gifts",
+    "compare"
+  ]
+}
