@@ -1,11 +1,11 @@
 ---
 name: shop-nobi
-description: Find, compare and choose products to buy from about 1,200 independent online stores, using Shop Nobi search. Use when the user wants to find a product, compare products, pick one to buy, get gift ideas, or asks for something like "best X under $Y", "where can I buy" or "which one should I get".
+description: Find, compare and choose products to buy from about 900 vetted independent online stores, using Shop Nobi search. Use when the user wants to find a product, compare products, pick one to buy, get gift ideas, or asks for something like "best X under $Y", "where can I buy" or "which one should I get".
 ---
 
 # Shop Nobi
 
-Shop Nobi searches the live catalogs of about 1,200 vetted independent stores. It sells nothing itself. The shopper buys on the website of the store.
+Shop Nobi searches the live catalogs of about 900 vetted independent stores. Store catalogs are kept constantly refreshed, so prices and stock are up to date. It sells nothing itself. The shopper buys on the website of the store.
 
 ## Tools
 
