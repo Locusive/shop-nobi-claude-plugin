@@ -5,7 +5,7 @@ This plugin adds two things to Claude Code:
 - The Shop Nobi connector. It gives Claude two tools, search_products and find_shop_nobi_page, from https://api.nobi.ai/v1/shop/mcp. No sign-in is needed.
 - The shop-nobi skill. It guides Claude through product search, a gift finder (5 picks with one-line reasons) and a side-by-side compare table.
 
-Shop Nobi searches the live catalogs of about 1,200 vetted independent online stores. It sells nothing itself. You buy on the website of the store. Your search text is sent to api.nobi.ai.
+Shop Nobi searches the live catalogs of about 900 vetted independent online stores. It sells nothing itself. You buy on the website of the store. Your search text is sent to api.nobi.ai.
 
 ## Install
 
