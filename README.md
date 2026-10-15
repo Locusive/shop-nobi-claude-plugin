@@ -9,7 +9,7 @@ Shop Nobi searches the live catalogs of about 900 vetted independent online stor
 
 ## Install
 
-Run these in your terminal. Replace Locusive/shop-nobi-claude-plugin with the GitHub repository that holds this plugin.
+Run these in your terminal.
 
 ```
 claude plugin marketplace add Locusive/shop-nobi-claude-plugin
@@ -21,12 +21,6 @@ You can also run the same steps inside Claude Code:
 ```
 /plugin marketplace add Locusive/shop-nobi-claude-plugin
 /plugin install shop-nobi@locusive
-```
-
-To test from a local copy before the repository is public, pass the folder that holds .claude-plugin/marketplace.json instead of Locusive/shop-nobi-claude-plugin:
-
-```
-claude plugin marketplace add /path/to/shop-nobi-plugin
 ```
 
 ## Try it
@@ -48,3 +42,7 @@ claude plugin marketplace add /path/to/shop-nobi-plugin
 - plugins/shop-nobi/.claude-plugin/plugin.json: plugin name, version and author.
 - plugins/shop-nobi/.mcp.json: the Shop Nobi connector.
 - plugins/shop-nobi/skills/shop-nobi/SKILL.md: the skill.
+- plugins/shop-nobi/README.md: the directory listing text.
+- LICENSE: MIT.
+- plugins/shop-nobi/README.md: the directory listing text.
+- LICENSE: MIT.
