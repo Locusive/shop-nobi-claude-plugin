@@ -10,7 +10,7 @@ Shop Nobi searches the live catalogs of about 900 vetted independent stores. Sto
 ## Tools
 
 - search_products: finds products. Use it for every product request.
-- find_shop_nobi_page: finds a ready-made Shop Nobi page for a broad topic, such as "leather boots". If a page comes back, share its title and link.
+- find_shop_nobi_page: finds a Shop Nobi page for a broad topic, such as "leather boots". If a page comes back, share its title and link.
 
 ## Searching
 
