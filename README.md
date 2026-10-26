@@ -4,7 +4,7 @@ Shop Nobi is an online search engine. This repository connects Claude Code and C
 
 This plugin adds two things to Claude Code:
 
-- The Shop Nobi connector. It gives Claude two tools, `search_products` and `find_shop_nobi_page`, from https://api.nobi.ai/v1/shop/mcp. No Nobi sign-in is needed.
+- The Shop Nobi connector. It gives Claude six Shop Nobi tools from https://api.nobi.ai/v1/shop/mcp: `search_products`, `find_shop_nobi_page`, `get_product_details`, `compare_products`, `check_price_and_availability` and `find_alternatives`. No Nobi sign-in is needed.
 - The shop-nobi skill. It guides Claude through product search, a gift finder (5 picks with one-line reasons) and a side-by-side compare table.
 
 Search text is sent to api.nobi.ai. Results may include a Nobi click link that forwards to the selling store. Final price, stock and delivery should be checked on that store's site. Some links may earn Nobi a commission; the skill displays a returned disclosure next to the link.
