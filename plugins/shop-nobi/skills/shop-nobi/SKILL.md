@@ -5,12 +5,12 @@ description: Find, compare and choose products to buy from about 900 vetted inde
 
 # Shop Nobi
 
-Shop Nobi searches the live catalogs of about 900 vetted independent stores. Store catalogs are kept constantly refreshed, so prices and stock are up to date. It sells nothing itself. The shopper buys on the website of the store.
+Shop Nobi is an online search engine. Its MCP tools currently search product listings from curated online stores, not services or other offerings. Product prices and availability may lag behind the store. It sells nothing itself; the shopper buys on the selling store's website.
 
 ## Tools
 
 - search_products: finds products. Use it for every product request.
-- find_shop_nobi_page: finds a Shop Nobi page for a broad topic, such as "leather boots". If a page comes back, share its title and link.
+- find_shop_nobi_page: finds an existing Shop Nobi page for an exact product topic, such as "leather boots". If a page comes back, share its title and link. If none is found, do not invent or substitute a broader page.
 
 ## Searching
 
@@ -31,6 +31,7 @@ For each product, show:
 - linkLabel, when it is set. Show it next to that product link, word for word. Example: [Store page] We may earn a commission.
 
 Do not shorten, edit or remove the link or the tags in it.
+The returned URL may be a Nobi click link that forwards to the seller. Check final price, stock and delivery on the seller's site.
 
 State only facts from the results. The results give the name, store, price, stock and link. Do not add ratings, reviews, materials or specs that the results do not show.
 
