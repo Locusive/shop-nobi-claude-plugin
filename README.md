@@ -1,11 +1,13 @@
-# Shop Nobi plugin for Claude Code
+# Shop Nobi search engine for Claude Code
+
+Shop Nobi is an online search engine. This plugin connects Claude Code to its public, read-only MCP tools, which currently search product listings from curated online stores. The tools do not search service listings or place orders.
 
 This plugin adds two things to Claude Code:
 
-- The Shop Nobi connector. It gives Claude two tools, search_products and find_shop_nobi_page, from https://api.nobi.ai/v1/shop/mcp. No sign-in is needed.
+- The Shop Nobi connector. It gives Claude two tools, `search_products` and `find_shop_nobi_page`, from https://api.nobi.ai/v1/shop/mcp. No Nobi sign-in is needed.
 - The shop-nobi skill. It guides Claude through product search, a gift finder (5 picks with one-line reasons) and a side-by-side compare table.
 
-Shop Nobi searches the live catalogs of about 900 vetted independent online stores. It sells nothing itself. You buy on the website of the store. Your search text is sent to api.nobi.ai.
+Search text is sent to api.nobi.ai. Results may include a Nobi click link that forwards to the selling store. Final price, stock and delivery should be checked on that store's site. Some links may earn Nobi a commission; the skill displays a returned disclosure next to the link.
 
 ## Install
 
@@ -29,9 +31,13 @@ You can also run the same steps inside Claude Code:
 - "Gift ideas for my dad. He likes fishing. Budget $75."
 - "Compare these two: <product 1> and <product 2>."
 
+To inspect a real MCP product response before installing the plugin, run `node examples/try-search.mjs "linen dress for a summer wedding under $150"` with Node 18 or newer. This optional example uses no package dependencies or account, and is not run by the plugin. Its query is sent to Shop Nobi and should be treated as an operator test, not outside adoption.
+
+For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nobi documentation](https://docs.nobi.ai/shop-nobi/), and [plain Markdown tool and response guide](https://nobi.ai/shop-nobi-mcp.md).
+
 ## What the skill does
 
-- Product requests: searches with your words and shows store, price, stock and link for each product.
+- Product requests: searches with your words and shows the fields returned for each product. Store, price, image and link may be absent.
 - Links: some links show a label such as "We may earn a commission". The skill shows that label next to the link.
 - Gift finder: asks who the gift is for, the occasion and the budget if missing, runs 2 to 4 searches, and returns 5 picks.
 - Compare: searches each product you name and returns a table with a one-line recommendation.
@@ -43,6 +49,5 @@ You can also run the same steps inside Claude Code:
 - plugins/shop-nobi/.mcp.json: the Shop Nobi connector.
 - plugins/shop-nobi/skills/shop-nobi/SKILL.md: the skill.
 - plugins/shop-nobi/README.md: the directory listing text.
-- LICENSE: MIT.
-- plugins/shop-nobi/README.md: the directory listing text.
+- examples/try-search.mjs: optional no-account live response example.
 - LICENSE: MIT.
