@@ -27,14 +27,17 @@ You can also run the same steps inside Claude Code:
 
 ## Install in Cursor
 
-This repository also contains a Cursor plugin manifest, MCP configuration, and the same product-search skill used by Claude Code. Until Cursor approves a marketplace listing, you can [add the MCP server to Cursor](https://cursor.com/install-mcp?name=shop-nobi&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vYXBpLm5vYmkuYWkvdjEvc2hvcC9tY3AifQ%3D%3D) if Cursor is installed. This link installs the connection only, not the skill or a reviewed marketplace plugin. You can also add the same public endpoint to a project at `.cursor/mcp.json`:
+This repository also contains a Cursor plugin manifest, MCP configuration, and the same product-search skill used by Claude Code. Until Cursor approves a marketplace listing, you can [add the MCP server to Cursor](https://cursor.com/install-mcp?name=shop-nobi&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vYXBpLm5vYmkuYWkvdjEvc2hvcC9tY3AiLCJoZWFkZXJzIjp7Ingtbm9iaS1tY3AtY2xpZW50Ijoic2hvcC1ub2JpLWN1cnNvciJ9fQ%3D%3D) if Cursor is installed. This link installs the connection only, not the skill or a reviewed marketplace plugin. You can also add the same public endpoint to a project at `.cursor/mcp.json`:
 
 ```json
 {
   "mcpServers": {
     "shop-nobi": {
       "type": "http",
-      "url": "https://api.nobi.ai/v1/shop/mcp"
+      "url": "https://api.nobi.ai/v1/shop/mcp",
+      "headers": {
+        "x-nobi-mcp-client": "shop-nobi-cursor"
+      }
     }
   }
 }
