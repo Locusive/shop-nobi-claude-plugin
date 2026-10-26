@@ -1,6 +1,6 @@
-# Shop Nobi search engine for Claude Code
+# Shop Nobi search engine for agents
 
-Shop Nobi is an online search engine. This plugin connects Claude Code to its public, read-only MCP tools, which currently search product listings from curated online stores. The tools do not search service listings or place orders.
+Shop Nobi is an online search engine. This repository connects Claude Code and Cursor to its public, read-only MCP tools, which currently search product listings from curated online stores. The tools do not search service listings or place orders.
 
 This plugin adds two things to Claude Code:
 
@@ -9,7 +9,7 @@ This plugin adds two things to Claude Code:
 
 Search text is sent to api.nobi.ai. Results may include a Nobi click link that forwards to the selling store. Final price, stock and delivery should be checked on that store's site. Some links may earn Nobi a commission; the skill displays a returned disclosure next to the link.
 
-## Install
+## Install in Claude Code
 
 Run these in your terminal.
 
@@ -24,6 +24,23 @@ You can also run the same steps inside Claude Code:
 /plugin marketplace add Locusive/shop-nobi-claude-plugin
 /plugin install shop-nobi@locusive
 ```
+
+## Install in Cursor
+
+This repository also contains a Cursor plugin manifest and MCP configuration. Until Cursor approves a marketplace listing, you can add the same public MCP endpoint to a project at `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "shop-nobi": {
+      "type": "http",
+      "url": "https://api.nobi.ai/v1/shop/mcp"
+    }
+  }
+}
+```
+
+Open Cursor's MCP settings to confirm the connection, then ask its agent to search Shop Nobi for a product. The server currently searches product listings only. It does not search services, place orders, or guarantee current price or availability.
 
 ## Try it
 
@@ -44,6 +61,7 @@ For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nob
 
 ## Files
 
+- .cursor-plugin/plugin.json and mcp.json: the Cursor plugin and remote MCP connection.
 - .claude-plugin/marketplace.json: lists the plugin for the marketplace.
 - plugins/shop-nobi/.claude-plugin/plugin.json: plugin name, version and author.
 - plugins/shop-nobi/.mcp.json: the Shop Nobi connector.
