@@ -10,5 +10,6 @@
   "repository": "https://github.com/Locusive/shop-nobi-claude-plugin",
   "license": "MIT",
   "keywords": ["product search", "shopping", "mcp", "search engine"],
+  "skills": "./plugins/shop-nobi/skills/",
   "mcpServers": "mcp.json"
 }
