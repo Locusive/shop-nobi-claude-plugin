@@ -1,0 +1,15 @@
+{
+  "name": "shop-nobi",
+  "version": "1.0.0",
+  "description": "Search online product listings from Cursor with Shop Nobi's public MCP server.",
+  "author": {
+    "name": "Locusive",
+    "email": "info@nobi.ai"
+  },
+  "homepage": "https://nobi.ai/shop/mcp",
+  "repository": "https://github.com/Locusive/shop-nobi-claude-plugin",
+  "license": "MIT",
+  "keywords": ["product search", "shopping", "mcp", "search engine"],
+  "skills": "./plugins/shop-nobi/skills/",
+  "mcpServers": "mcp.json"
+}
