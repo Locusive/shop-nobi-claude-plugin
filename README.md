@@ -27,7 +27,7 @@ You can also run the same steps inside Claude Code:
 
 ## Install in Cursor
 
-This repository also contains a Cursor plugin manifest and MCP configuration. Until Cursor approves a marketplace listing, you can add the same public MCP endpoint to a project at `.cursor/mcp.json`:
+This repository also contains a Cursor plugin manifest and MCP configuration. Until Cursor approves a marketplace listing, you can [add the MCP server to Cursor](https://cursor.com/install-mcp?name=shop-nobi&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vYXBpLm5vYmkuYWkvdjEvc2hvcC9tY3AifQ%3D%3D) if Cursor is installed. This link installs the connection, not a reviewed marketplace plugin. You can also add the same public endpoint to a project at `.cursor/mcp.json`:
 
 ```json
 {
