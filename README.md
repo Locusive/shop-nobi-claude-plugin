@@ -50,7 +50,7 @@ Open Cursor's MCP settings to confirm the connection, then ask its agent to sear
 
 To inspect a real MCP product response before installing the plugin, clone this repository and run `node examples/try-search.mjs "linen dress for a summer wedding under $150"` from its root with Node 18 or newer. This optional example uses no package dependencies or account, and is not run by the plugin. Its query is sent to Shop Nobi; our own runs of it are operator tests, not outside adoption.
 
-For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nobi documentation](https://docs.nobi.ai/shop-nobi/), and [plain Markdown tool and response guide](https://nobi.ai/shop-nobi-mcp.md).
+For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nobi documentation](https://docs.nobi.ai/shop-nobi-connector/), and [plain Markdown tool and response guide](https://nobi.ai/shop-nobi-mcp.md).
 
 ## What the skill does
 
