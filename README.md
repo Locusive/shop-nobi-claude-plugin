@@ -1,6 +1,6 @@
 # Shop Nobi search engine for agents
 
-Shop Nobi is an online search engine. This plugin connects Claude Code to its public, read-only MCP tools, which currently search product listings from curated online stores. The tools do not search service listings or place orders.
+Shop Nobi is an online search engine. This repository connects Claude Code and Cursor to its public, read-only MCP tools, which currently search product listings from curated online stores. The tools do not search service listings or place orders.
 
 This plugin adds two things to Claude Code:
 
@@ -33,6 +33,7 @@ This repository also contains a Cursor plugin manifest and MCP configuration. Un
 {
   "mcpServers": {
     "shop-nobi": {
+      "type": "http",
       "url": "https://api.nobi.ai/v1/shop/mcp"
     }
   }
