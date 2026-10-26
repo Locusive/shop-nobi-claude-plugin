@@ -33,7 +33,7 @@ You can also run the same steps inside Claude Code:
 
 To inspect a real MCP product response before installing the plugin, clone this repository and run `node examples/try-search.mjs "linen dress for a summer wedding under $150"` from its root with Node 18 or newer. This optional example uses no package dependencies or account, and is not run by the plugin. Its query is sent to Shop Nobi; our own runs of it are operator tests, not outside adoption.
 
-For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nobi documentation](https://docs.nobi.ai/shop-nobi/), and [plain Markdown tool and response guide](https://nobi.ai/shop-nobi-mcp.md).
+For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nobi documentation](https://docs.nobi.ai/shop-nobi/), and [plain Markdown tool and response guide](https://nobi.ai/shop-nobi-mcp.md). To build an agent that searches products through Shop Nobi, see the recipes in [`examples/`](examples/).
 
 ## What the skill does
 
@@ -50,4 +50,5 @@ For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nob
 - plugins/shop-nobi/skills/shop-nobi/SKILL.md: the skill.
 - plugins/shop-nobi/README.md: the directory listing text.
 - examples/try-search.mjs: optional no-account live response example.
+- examples/README.md and the *_shop_agent files: recipes for LangChain, LlamaIndex, the Vercel AI SDK and the OpenAI Agents SDK.
 - LICENSE: MIT.
