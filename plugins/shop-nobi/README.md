@@ -7,6 +7,26 @@ Shop Nobi is an online search engine. Its public MCP tools currently search prod
 - The Shop Nobi connector, at https://api.nobi.ai/v1/shop/mcp. It gives Claude six tools: `search_products`, `find_shop_nobi_page`, `get_product_details`, `compare_products`, `check_price_and_availability` and `find_alternatives`. They cover product search, exact-topic shopping pages, catalog details, comparison, price and stock checks, and similar listings. No Nobi sign-in is needed.
 - The shop-nobi skill. It guides Claude through product search, a gift finder (5 picks with one-line reasons) and a side-by-side compare table.
 
+## Product and variant identifiers
+
+Read the live `tools/list` schema before calling a tool. The returned `id` is an opaque Nobi variant identifier, not a Shopify ID or SKU. Nobi `productId` and `variantId`, when exposed, identify our own parent product and selected variant.
+
+When using a Shopify product or variant ID, always include the selling merchant's domain as `storeDomain`, for example `example.com`. Use `sourceProductId` for a Shopify parent product and `sourceVariantId` for a Shopify variant, only when the live `get_product_details` schema advertises those arguments:
+
+```json
+{"sourceProductId":"123456789","storeDomain":"example.com"}
+```
+
+```json
+{"sourceVariantId":"987654321","storeDomain":"example.com"}
+```
+
+These IDs and domain are illustrative; use the actual catalog ID and merchant hostname. A known Nobi `merchantId` is an alternative merchant context where supported. SKUs also require merchant context. Never resolve source IDs or SKUs globally, guess a merchant, or put a Shopify ID into Nobi `id`, `productId` or `variantId` fields.
+
+If the available schema accepts only `id`, use the Nobi variant ID returned by `search_products` rather than sending unsupported source-ID arguments. Comparison, price/availability and alternatives tools use returned Nobi variant IDs. A parent lookup returns variant choices; select a variant before reporting its price or stock.
+
+[Full identifier and response guide](https://docs.nobi.ai/shop-nobi-mcp-response/).
+
 ## Try it
 
 - "Find me a waterproof jacket under $200."
