@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Optional smoke test for the public Shop Nobi MCP server. Node 18+ is required.
-const endpoint = "https://api.nobi.ai/v1/shop/mcp";
+const endpoint = "https://api.nobi.ai/v1/shop/mcp?source=framework_example";
 const query = process.argv.slice(2).join(" ").trim() || "linen dress for a summer wedding under $150";
 const headers = {
   "content-type": "application/json",

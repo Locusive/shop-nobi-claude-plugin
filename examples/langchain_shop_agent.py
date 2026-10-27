@@ -16,7 +16,7 @@ import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 
-SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp"
+SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp?source=framework_example"
 
 
 async def main() -> None:

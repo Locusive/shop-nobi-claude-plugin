@@ -7,7 +7,7 @@ This plugin adds two things to Claude Code:
 - The Shop Nobi connector. It gives Claude six Shop Nobi tools from https://api.nobi.ai/v1/shop/mcp: `search_products`, `find_shop_nobi_page`, `get_product_details`, `compare_products`, `check_price_and_availability` and `find_alternatives`. No Nobi sign-in is needed.
 - The shop-nobi skill. It guides Claude through product search, a gift finder (5 picks with one-line reasons) and a side-by-side compare table.
 
-Search text is sent to api.nobi.ai. Results may include a Nobi click link that forwards to the selling store. Final price, stock and delivery should be checked on that store's site. Some links may earn Nobi a commission; the skill displays a returned disclosure next to the link.
+Search text, selected product identifiers and any requested price limits are sent to api.nobi.ai. Results may include a Nobi click link that forwards to the selling store. Final price, stock and delivery should be checked on that store's site. Some links may earn Nobi a commission; the skill displays a returned disclosure next to the link.
 
 ## Install in Claude Code
 
@@ -27,14 +27,14 @@ You can also run the same steps inside Claude Code:
 
 ## Install in Cursor
 
-This repository also contains a Cursor plugin manifest, MCP configuration, and the same product-search skill used by Claude Code. Until Cursor approves a marketplace listing, you can [add the MCP server to Cursor](https://cursor.com/install-mcp?name=shop-nobi&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vYXBpLm5vYmkuYWkvdjEvc2hvcC9tY3AiLCJoZWFkZXJzIjp7Ingtbm9iaS1tY3AtY2xpZW50Ijoic2hvcC1ub2JpLWN1cnNvciJ9fQ%3D%3D) if Cursor is installed. This link installs the connection only, not the skill or a reviewed marketplace plugin. You can also add the same public endpoint to a project at `.cursor/mcp.json`:
+This repository also contains a Cursor plugin manifest, MCP configuration, and the same product-search skill used by Claude Code. Until Cursor approves a marketplace listing, you can [add the MCP server to Cursor](https://cursor.com/install-mcp?name=shop-nobi&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vYXBpLm5vYmkuYWkvdjEvc2hvcC9tY3A%2Fc291cmNlPWN1cnNvcl9wbHVnaW4iLCJoZWFkZXJzIjp7Ingtbm9iaS1tY3AtY2xpZW50Ijoic2hvcC1ub2JpLWN1cnNvciJ9fQ%3D%3D) if Cursor is installed. This link installs the connection only, not the skill or a reviewed marketplace plugin. You can also add the same public endpoint to a project at `.cursor/mcp.json`:
 
 ```json
 {
   "mcpServers": {
     "shop-nobi": {
       "type": "http",
-      "url": "https://api.nobi.ai/v1/shop/mcp",
+      "url": "https://api.nobi.ai/v1/shop/mcp?source=cursor_plugin",
       "headers": {
         "x-nobi-mcp-client": "shop-nobi-cursor"
       }
@@ -44,6 +44,8 @@ This repository also contains a Cursor plugin manifest, MCP configuration, and t
 ```
 
 Open Cursor's MCP settings to confirm the connection, then ask its agent to search Shop Nobi for a product. The server currently searches product listings only. It does not search services, place orders, or guarantee current price or availability.
+
+Installed connections include a source label: `claude_plugin` for Claude Code and `cursor_plugin` for Cursor. It identifies the package installation link in Nobi analytics, separately from the client name. A copied configuration keeps its label; it does not prove where someone first found Shop Nobi.
 
 ## Try it
 
@@ -57,10 +59,13 @@ For other MCP clients, see the [setup page](https://nobi.ai/shop/mcp), [Shop Nob
 
 ## What the skill does
 
-- Product requests: searches with your words and shows the fields returned for each product. Store, price, image and link may be absent.
+- Product requests: searches with your words and shows the returned catalog fields. Store, price, image and link may be absent.
+- Product details: reads descriptions, specifications, images and variant choices for a result.
+- Price and stock: checks one or more results against the latest catalog data.
+- Alternatives: finds similar catalog listings, with an optional price ceiling.
 - Links: some links show a label such as "We may earn a commission". The skill shows that label next to the link.
 - Gift finder: asks who the gift is for, the occasion and the budget if missing, runs 2 to 4 searches, and returns 5 picks.
-- Compare: searches each product you name and returns a table with a one-line recommendation.
+- Compare: resolves each named product through search, uses the comparison tool and returns a table with a one-line recommendation based on the returned facts.
 
 ## Files
 

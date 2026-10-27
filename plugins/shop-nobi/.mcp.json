@@ -1,1 +1,1 @@
-{"mcpServers": {"shop-nobi": {"type": "http", "url": "https://api.nobi.ai/v1/shop/mcp"}}}
+{"mcpServers": {"shop-nobi": {"type": "http", "url": "https://api.nobi.ai/v1/shop/mcp?source=claude_plugin"}}}

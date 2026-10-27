@@ -2,7 +2,7 @@
   "mcpServers": {
     "shop-nobi": {
       "type": "http",
-      "url": "https://api.nobi.ai/v1/shop/mcp",
+      "url": "https://api.nobi.ai/v1/shop/mcp?source=cursor_plugin",
       "headers": {
         "x-nobi-mcp-client": "shop-nobi-cursor"
       }
