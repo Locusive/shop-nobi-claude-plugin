@@ -5,6 +5,8 @@ Shop Nobi is a product search engine for the best products online, exposed as a 
 - Canonical tool and response reference: https://nobi.ai/shop-nobi-mcp.md
 - Docs: https://docs.nobi.ai/shop-nobi/
 
+Executable recipes and the optional response demo use `?source=framework_example` to identify their configuration in Nobi analytics. It is separate from the client name and stays with copied examples.
+
 Each recipe builds a minimal agent that uses Shop Nobi to search products. Swap in any model; these use an OpenAI model only for brevity.
 
 | Framework | File | Install |

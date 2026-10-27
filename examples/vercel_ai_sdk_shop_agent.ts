@@ -14,7 +14,7 @@
 import { experimental_createMCPClient as createMCPClient, generateText } from "ai";
 import { openai } from "@ai-sdk/openai";
 
-const SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp";
+const SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp?source=framework_example";
 
 const client = await createMCPClient({
   transport: { type: "http", url: SHOP_NOBI_MCP_URL }, // Streamable HTTP for remote servers

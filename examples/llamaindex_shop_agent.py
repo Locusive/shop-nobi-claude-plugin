@@ -15,7 +15,7 @@ from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.openai import OpenAI
 from llama_index.tools.mcp import get_tools_from_mcp_url
 
-SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp"
+SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp?source=framework_example"
 
 
 async def main() -> None:

@@ -13,7 +13,7 @@ import asyncio
 
 from agents import Agent, HostedMCPTool, Runner
 
-SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp"
+SHOP_NOBI_MCP_URL = "https://api.nobi.ai/v1/shop/mcp?source=framework_example"
 
 agent = Agent(
     name="Product search agent",
